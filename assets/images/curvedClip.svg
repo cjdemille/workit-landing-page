@@ -1,0 +1,8 @@
+<svg width="0" height="0">
+  <defs>
+    <clipPath id="curvedClip" clipPathUnits="objectBoundingBox">
+      <!-- Adjust the .6 to change the steepness of the curve -->
+      <path d="M0,0 L1,0 L1,0.8 Q0.5 1 0 0.8 Z"/>
+    </clipPath>
+  </defs>
+</svg>

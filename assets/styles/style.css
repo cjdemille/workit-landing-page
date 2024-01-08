@@ -27,9 +27,20 @@ a:hover {
     cursor: pointer;
 }
 
-.rounded {
-    border-bottom-left-radius: 50% 1%;
-    border-bottom-right-radius: 50% 1%;
+
+header::after{
+    content:'';
+    background-color:var(--purple);
+    mask: url(../images/roundedbottom.svg);
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    position: absolute;
+    background-position: top;
+    top:93%;
+    left:0;
+    height:15%;
+    width:100vw;
+    z-index: -1;
 }
 
 nav {
@@ -44,6 +55,7 @@ header {
     padding: 2rem 1rem 5rem;
     background-color: var(--purple);
     color: var(--white);
+    position: relative;
 }
 
 .underline {
@@ -93,6 +105,23 @@ header {
 
 .pitch {
     background-color: var(--ltGray);
+    position: relative;
+    z-index: -3;
+}
+
+.pitch::after{
+    content:'';
+    background-color: var(--ltGray);
+    mask: url(../images/roundedbottom.svg);
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    position: absolute;
+    background-position: top;
+    top:95%;
+    left:0;
+    height:15%;
+    width:100vw;
+    z-index: -1;
 }
 
 .point {
@@ -168,17 +197,20 @@ footer svg path:hover {
 
 @media screen and (min-width:700px) {
 
-    .rounded {
-        border-bottom-left-radius: 50% 2%;
-        border-bottom-right-radius: 50% 2%;
-    }
-
     header {
         background: url(../images/bg-pattern-1.svg), url(../images/bg-pattern-2.svg), var(--purple);
         background-position: -12rem center, 110% 90%;
         background-repeat: no-repeat;
     }
+    header::after{
+        top:90%;
+        height:25%;
+    }
 
+    .pitch::after{
+        top:90%;
+        height:25%;
+    }
     .point {
         flex-direction: row;
         justify-content: center;
@@ -240,8 +272,14 @@ footer svg path:hover {
 }
 
 @media screen and (min-width:1200px) {
-
-
+    header::after{
+        top:83%;
+        height:40%;
+    }
+    .pitch::after{
+        top:73%;
+        height:45%;
+    }
     #hero {
         bottom: -15rem;
         width: 40%;
